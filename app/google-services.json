@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "952948323156",
+    "project_id": "tot-educational-app",
+    "storage_bucket": "tot-educational-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:952948323156:android:551abc8cd316a257024ec1",
+        "android_client_info": {
+          "package_name": "com.example.tot_educational"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "952948323156-9vucrt7mg9jnege4m6v13niair48o7gc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0CTr4DM7WeTs-ICGtYov2m-dEI8fo72c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "952948323156-9vucrt7mg9jnege4m6v13niair48o7gc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

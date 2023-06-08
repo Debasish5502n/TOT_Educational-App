@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/gray"
+    android:layout_width="580dp"
+    android:layout_height="300dp">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lesson_score_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/si_no"
+        tools:listitem="@layout/layout_lessons_score" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/wrong"
+        app:layout_constraintEnd_toEndOf="@+id/lesson_score_recyclerView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/si_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="S."
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/lesson_score_recyclerView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/si_no"
+        app:layout_constraintStart_toEndOf="@+id/si_no"
+        app:layout_constraintTop_toTopOf="@+id/si_no" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/image"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toTopOf="@+id/image" />
+
+    <TextView
+        android:id="@+id/total_poll"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="T.P"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView17"
+        app:layout_constraintStart_toEndOf="@+id/textView17"
+        app:layout_constraintTop_toTopOf="@+id/textView17" />
+
+    <TextView
+        android:id="@+id/wrong_poll"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="W.A"
+        android:textColor="@color/red"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/total_poll"
+        app:layout_constraintStart_toEndOf="@+id/total_poll"
+        app:layout_constraintTop_toTopOf="@+id/total_poll" />
+
+    <TextView
+        android:id="@+id/correct_poll"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="C.A"
+        android:textColor="@color/successGreen"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/wrong_poll"
+        app:layout_constraintStart_toEndOf="@+id/wrong_poll"
+        app:layout_constraintTop_toTopOf="@+id/wrong_poll" />
+
+    <TextView
+        android:id="@+id/total_answer"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="T.A"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/correct_poll"
+        app:layout_constraintStart_toEndOf="@+id/correct_poll"
+        app:layout_constraintTop_toTopOf="@+id/correct_poll" />
+</androidx.constraintlayout.widget.ConstraintLayout>

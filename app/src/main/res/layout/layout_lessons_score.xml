@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/si_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1."
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/avatarra"
+        app:layout_constraintBottom_toBottomOf="@+id/si_no"
+        app:layout_constraintStart_toEndOf="@+id/si_no"
+        app:layout_constraintTop_toTopOf="@+id/si_no" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Debasish sahoo"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/image"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toTopOf="@+id/image" />
+
+    <TextView
+        android:id="@+id/total_poll"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="20"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/name"
+        app:layout_constraintStart_toEndOf="@+id/name"
+        app:layout_constraintTop_toTopOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/wrong_poll"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="20"
+        android:textColor="@color/red"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/total_poll"
+        app:layout_constraintStart_toEndOf="@+id/total_poll"
+        app:layout_constraintTop_toTopOf="@+id/total_poll" />
+
+    <TextView
+        android:id="@+id/correct_poll"
+        android:layout_width="36dp"
+        android:layout_height="24dp"
+        android:layout_margin="10dp"
+        android:text="20"
+        android:textColor="@color/successGreen"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/wrong_poll"
+        app:layout_constraintStart_toEndOf="@+id/wrong_poll"
+        app:layout_constraintTop_toTopOf="@+id/wrong_poll" />
+
+    <TextView
+        android:id="@+id/total_answer"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="20"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/correct_poll"
+        app:layout_constraintStart_toEndOf="@+id/correct_poll"
+        app:layout_constraintTop_toTopOf="@+id/correct_poll" />
+</androidx.constraintlayout.widget.ConstraintLayout>

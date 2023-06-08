@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <SeekBar
+        android:id="@+id/poll_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:thumb="@android:color/transparent"
+        android:max="100"
+        android:progress="25"
+        android:progressDrawable="@drawable/progress_track"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/poll_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:max="100"
+        android:progress="25"
+        android:progressDrawable="@drawable/progress_track"
+        android:thumb="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/poll_1" />
+
+    <SeekBar
+        android:id="@+id/poll_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:max="100"
+        android:progress="25"
+        android:progressDrawable="@drawable/progress_track"
+        android:thumb="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/poll_2" />
+
+    <SeekBar
+        android:id="@+id/poll_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:max="100"
+        android:progress="25"
+        android:progressDrawable="@drawable/progress_track"
+        android:thumb="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/poll_3" />
+
+    <TextView
+        android:id="@+id/poll_1_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20%"
+        android:textSize="20dp"
+        android:layout_marginEnd="30dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/poll_1"
+        app:layout_constraintEnd_toEndOf="@+id/poll_1"
+        app:layout_constraintTop_toTopOf="@+id/poll_1" />
+
+    <TextView
+        android:id="@+id/poll_4_percentageeeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A"
+        android:textSize="25dp"
+        android:layout_marginStart="30dp"
+        android:textColor="@color/black"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/poll_1"
+        app:layout_constraintStart_toStartOf="@+id/poll_1"
+        app:layout_constraintTop_toTopOf="@+id/poll_1" />
+
+    <TextView
+        android:id="@+id/poll_4_percehntageeeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="B"
+        android:textSize="25dp"
+        android:layout_marginStart="30dp"
+        android:textColor="@color/black"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/poll_2"
+        app:layout_constraintStart_toStartOf="@+id/poll_2"
+        app:layout_constraintTop_toTopOf="@+id/poll_2" />
+
+    <TextView
+        android:id="@+id/poll_2_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20%"
+        android:textSize="20dp"
+        android:layout_marginEnd="30dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/poll_2"
+        app:layout_constraintEnd_toEndOf="@+id/poll_2"
+        app:layout_constraintTop_toTopOf="@+id/poll_2" />
+
+    <TextView
+        android:id="@+id/poll_4_perccentageeeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="C"
+        android:textSize="25dp"
+        android:layout_marginStart="30dp"
+        android:textColor="@color/black"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/poll_3"
+        app:layout_constraintStart_toStartOf="@+id/poll_3"
+        app:layout_constraintTop_toTopOf="@+id/poll_3" />
+
+    <TextView
+        android:id="@+id/poll_3_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20%"
+        android:textSize="20dp"
+        android:layout_marginEnd="30dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/poll_3"
+        app:layout_constraintEnd_toEndOf="@+id/poll_3"
+        app:layout_constraintTop_toTopOf="@+id/poll_3" />
+
+    <TextView
+        android:id="@+id/poll_4_bpercentageeeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="D"
+        android:textSize="25dp"
+        android:layout_marginStart="30dp"
+        android:textColor="@color/black"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/poll_4"
+        app:layout_constraintStart_toStartOf="@+id/poll_4"
+        app:layout_constraintTop_toTopOf="@+id/poll_4" />
+
+    <TextView
+        android:id="@+id/poll_4_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20%"
+        android:textSize="20dp"
+        android:layout_marginEnd="30dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/poll_4"
+        app:layout_constraintEnd_toEndOf="@+id/poll_4"
+        app:layout_constraintTop_toTopOf="@+id/poll_4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

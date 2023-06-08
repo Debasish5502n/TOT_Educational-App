@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="Home"
+        android:iconTint="@color/Btn_color"
+        android:id="@+id/home"
+        android:icon="@drawable/home"
+        app:showAsAction="ifRoom"/>
+    <item android:title="Community"
+        android:iconTint="@color/Btn_color"
+        android:id="@+id/community"
+        android:icon="@drawable/chats"
+        app:showAsAction="ifRoom"/>
+    <item android:title="Pdf"
+        android:iconTint="@color/Btn_color"
+        android:id="@+id/pdf"
+        android:icon="@drawable/pdf"
+        app:showAsAction="ifRoom"/>
+    <item android:title="Videos"
+        android:iconTint="@color/Btn_color"
+        android:id="@+id/videos"
+        android:icon="@drawable/videos"
+        app:showAsAction="ifRoom"/>
+
+
+
+</menu>

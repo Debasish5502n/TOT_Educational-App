@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.VideoPlayerActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="8">
+
+        <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+            android:id="@+id/exoplayerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:visibility="gone"
+            app:controller_layout_id="@layout/custom_playback"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.504"
+            app:resize_mode="fill"
+            app:use_controller="true" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:id="@+id/youtube_player_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/youtubePLayer_background"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@drawable/transition_background_drawable"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/live_chat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:background="@color/background"
+            android:visibility="visible">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:elevation="3dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView10"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="10dp"
+                        app:srcCompat="@drawable/comment"
+                        app:tint="#707070" />
+
+                    <ImageView
+                        android:id="@+id/screenShots"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="10dp"
+                        app:srcCompat="@drawable/screenshot"
+                        android:visibility="gone"
+                        app:tint="#707070" />
+
+                    <ImageView
+                        android:id="@+id/poll_score"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="10dp"
+                        app:srcCompat="@drawable/poll_score"
+                        app:tint="#707070" />
+
+                    <ImageView
+                        android:id="@+id/exit"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="10dp"
+                        app:srcCompat="@drawable/exit"
+                        app:tint="#707070" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/sendbtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circle_green"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/cardView"
+                app:layout_constraintEnd_toStartOf="@+id/cardView3"
+                app:layout_constraintTop_toTopOf="@+id/cardView"
+                app:srcCompat="@drawable/send"
+                app:tint="@color/white" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="8dp"
+                android:elevation="8dp"
+                android:padding="8dp"
+                app:cardCornerRadius="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/sendbtn"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/smsbox12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:backgroundTint="@color/white"
+                        android:hint="Type a sms....."
+                        android:inputType="text"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/background"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@+id/cardView3"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/view"
+                    app:tint="#707070" />
+
+                <TextView
+                    android:id="@+id/lesson_live_watching"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 L"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:weightSum="2"
+                app:layout_constraintBottom_toTopOf="@+id/cardView"
+                app:layout_constraintEnd_toStartOf="@+id/cardView3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/liveChatRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    tools:listitem="@layout/layout_lesson_comments" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/poll_system"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:layout_weight="1">
+
+                    <SeekBar
+                        android:id="@+id/poll_1_progress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:progressDrawable="@drawable/progress_track"
+                        android:thumb="@android:color/transparent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <SeekBar
+                        android:id="@+id/poll_2_progress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:progressDrawable="@drawable/progress_track"
+                        android:thumb="@android:color/transparent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/poll_1_linear" />
+
+                    <SeekBar
+                        android:id="@+id/poll_3_progress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:progressDrawable="@drawable/progress_track"
+                        android:thumb="@android:color/transparent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/poll_2_linear" />
+
+                    <SeekBar
+                        android:id="@+id/poll_4_progress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:progressDrawable="@drawable/progress_track"
+                        android:thumb="@android:color/transparent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/poll_3_linear" />
+
+                    <LinearLayout
+                        android:id="@+id/poll_1_linear"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/transition_background_drawable"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="@+id/poll_1_progress"
+                        app:layout_constraintEnd_toEndOf="@+id/poll_1_progress"
+                        app:layout_constraintStart_toStartOf="@+id/poll_1_progress"
+                        app:layout_constraintTop_toTopOf="@+id/poll_1_progress">
+
+                        <TextView
+                            android:id="@+id/poll_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/transition_background_drawable" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/poll_2_linear"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/transition_background_drawable"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="@+id/poll_2_progress"
+                        app:layout_constraintEnd_toEndOf="@+id/poll_2_progress"
+                        app:layout_constraintStart_toStartOf="@+id/poll_2_progress"
+                        app:layout_constraintTop_toTopOf="@+id/poll_2_progress">
+
+                        <TextView
+                            android:id="@+id/poll_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/transition_background_drawable" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/poll_3_linear"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/transition_background_drawable"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="@+id/poll_3_progress"
+                        app:layout_constraintEnd_toEndOf="@+id/poll_3_progress"
+                        app:layout_constraintStart_toStartOf="@+id/poll_3_progress"
+                        app:layout_constraintTop_toTopOf="@+id/poll_3_progress">
+
+                        <TextView
+                            android:id="@+id/poll_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/transition_background_drawable" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/poll_4_linear"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/transition_background_drawable"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="@+id/poll_4_progress"
+                        app:layout_constraintEnd_toEndOf="@+id/poll_4_progress"
+                        app:layout_constraintStart_toStartOf="@+id/poll_4_progress"
+                        app:layout_constraintTop_toTopOf="@+id/poll_4_progress">
+
+                        <TextView
+                            android:id="@+id/poll_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/transition_background_drawable" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/poll_1_percentage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="30dp"
+                        android:textColor="@color/black"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/poll_1_linear"
+                        app:layout_constraintEnd_toEndOf="@+id/poll_1_linear"
+                        app:layout_constraintTop_toTopOf="@+id/poll_1_linear" />
+
+                    <TextView
+                        android:id="@+id/poll_4_percentageeeb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:text="A"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="@+id/poll_1_linear"
+                        app:layout_constraintStart_toStartOf="@+id/poll_1_linear"
+                        app:layout_constraintTop_toTopOf="@+id/poll_1_linear" />
+
+                    <TextView
+                        android:id="@+id/poll_4_percehntageeeb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:text="B"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="@+id/poll_2_linear"
+                        app:layout_constraintStart_toStartOf="@+id/poll_2_linear"
+                        app:layout_constraintTop_toTopOf="@+id/poll_2_linear" />
+
+                    <TextView
+                        android:id="@+id/poll_2_percentage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="30dp"
+                        android:textColor="@color/black"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/poll_2_linear"
+                        app:layout_constraintEnd_toEndOf="@+id/poll_2_linear"
+                        app:layout_constraintTop_toTopOf="@+id/poll_2_linear" />
+
+                    <TextView
+                        android:id="@+id/poll_4_perccentageeeb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:text="C"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="@+id/poll_3_linear"
+                        app:layout_constraintStart_toStartOf="@+id/poll_3_linear"
+                        app:layout_constraintTop_toTopOf="@+id/poll_3_linear" />
+
+                    <TextView
+                        android:id="@+id/poll_3_percentage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="30dp"
+                        android:textColor="@color/black"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/poll_3_linear"
+                        app:layout_constraintEnd_toEndOf="@+id/poll_3_linear"
+                        app:layout_constraintTop_toTopOf="@+id/poll_3_linear" />
+
+                    <TextView
+                        android:id="@+id/poll_4_bpercentageeeb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:text="D"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="@+id/poll_4_linear"
+                        app:layout_constraintStart_toStartOf="@+id/poll_4_linear"
+                        app:layout_constraintTop_toTopOf="@+id/poll_4_linear" />
+
+                    <TextView
+                        android:id="@+id/poll_4_percentage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="30dp"
+                        android:textColor="@color/black"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/poll_4_linear"
+                        app:layout_constraintEnd_toEndOf="@+id/poll_4_linear"
+                        app:layout_constraintTop_toTopOf="@+id/poll_4_linear" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/enter"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/enter"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        android:backgroundTint="@color/background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#707070" />
+</androidx.constraintlayout.widget.ConstraintLayout>
